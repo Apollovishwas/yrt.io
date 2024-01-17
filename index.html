@@ -101,13 +101,20 @@
                 Your browser does not support the video tag.
             </video>
 
-            <div class="date-time" id="dateTime"></div>
+            <div class="date-time" id="dateTime" onclick="startVideo()"></div>
         </div>
       
 
        
     </div>
     <script>
+        function startVideo() {
+            console.log("Changed");
+        var video = document.getElementById('videoSource');
+        video.play();
+    }
+
+        
         var currentVideo = 1;
          function changeVideo() {
             var videoElement = document.getElementById('videoSource');
